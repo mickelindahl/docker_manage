@@ -16,7 +16,7 @@ Cron job to reateart containers every day at 01:00 at in order to maintain the o
 ```
 
 ## System restart 
-Cron job to restart system every Saturday 00:30 week in order to maintain the overall health the system
+Cron job to restart system every Saturday 00:30 week in order to maintain the overall health the system. This job needs to be run by root.
 ```
 30 00 * * 6 reboot
 ```
