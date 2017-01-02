@@ -10,12 +10,15 @@ restart: always
 ```
 
 ## Container retart
-Cron job to reateart containers at least once per day in order to maintain the overall health of apps
+Cron job to reateart containers every day at 01:00 at in order to maintain the overall health of apps
 ```
-0 0 1 * * docker restart $(docker ps -q)
+00 01 * * * docker restart $(docker ps -q)
 ```
 
-## System retart 
-Cron job to reateart containers at least once per week in order to maintain the overall health the system
+## System restart 
+Cron job to restart system every Saturday 00:30 week in order to maintain the overall health the system
+```
+30 00 * * 6 reboot
+```
 
 
