@@ -28,7 +28,7 @@ Run `docker rmi $(docker images -f "dangling=true" -q)` to remove all images wit
 
 ## Buld latest 
 If not the latest LTS realease of jenkins is on there official docker hub one can go ahead and
-clone there [docker repository]()https://github.com/jenkinsci/docker 
+clone there [docker repository](https://github.com/jenkinsci/docker) 
 and build it your self. Just change version in the `Dockerfile` and then run
 ```
 docker build . --tag jenkins:{version}
