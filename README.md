@@ -35,3 +35,6 @@ docker build . --tag jenkins:{version}
 ```
 
 Volia!
+
+## Pipelines
+Need to go to global tool configurations and add grovvy installation
