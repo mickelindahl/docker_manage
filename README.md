@@ -26,3 +26,12 @@ Cron job to restart system every Saturday 00:30 week in order to maintain the ov
 
 Run `docker rmi $(docker images -f "dangling=true" -q)` to remove all images with repository and tag filed set to`<none>` ([reference](https://docs.docker.com/engine/reference/commandline/images/)
 
+## Buld latest 
+If not the latest LTS realease of jenkins is on there official docker hub one can go ahead and
+clone there docker repository and build it your self. Just change version in the `Dockerfile` and
+then run
+```
+docker build . --tag jenkins:{version}
+```
+
+Volia!
