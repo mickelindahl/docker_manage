@@ -12,6 +12,28 @@ sudo usermod -aG docker $(whoami)
 
 Log out and log in from your server to activate your new groups.
 
+## Install docker-compose 
+[Source](https://docs.docker.com/compose/install/)
+
+Find out latest docker-compose version [here](https://github.com/docker/compose/releases). Then replace that with the
+version stated below an run the command. This will download docker compose.
+
+```
+sudo -i
+curl -L https://github.com/docker/compose/releases/download/1.15.0/docker-compose-`uname -s`-`uname -m` -o /usr/local/bin/docker-compose
+```
+
+Change permissions
+
+```
+sudo chmod +x /usr/local/bin/docker-compose
+```
+
+Test installation
+
+```
+docker-compose --version
+```
 
 ## Enable restart of docker and services at boot
 
