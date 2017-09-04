@@ -2,6 +2,17 @@
 
 Usefull information for managing docker containers
 
+## Add user to docker group
+Working with docker is a pain if yuo can not run it as your user. Therefore
+add your user to the docker group
+
+```
+sudo usermod -aG docker $(whoami)
+```
+
+Log out and log in from your server to activate your new groups.
+
+
 ## Enable restart of docker and services at boot
 
 In each aplications that should start at boot add in  `docker-compose.yml`
