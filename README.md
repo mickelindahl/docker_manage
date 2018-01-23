@@ -59,6 +59,9 @@ Cron job to restart system every Saturday 00:30 week in order to maintain the ov
 
 Run `docker rmi $(docker images -f "dangling=true" -q --no-trunc)` to remove all images with repository and tag filed set to`<none>` ([reference](https://docs.docker.com/engine/reference/commandline/images/)
 
+## Remove unused volumes
+docker volume rm $(docker volume ls -qf dangling=true)
+
 ## Buld latest 
 If not the latest LTS realease of jenkins is on there official docker hub one can go ahead and
 clone there [docker repository](https://github.com/jenkinsci/docker) 
