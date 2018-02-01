@@ -74,3 +74,18 @@ Volia!
 
 ## Pipelines
 Need to go to global tool configurations and add grovvy installation
+
+## Erros
+
+### listen tcp 0.0.0.0:443: bind: address already in use
+Could be cerbot that have stuck, so check what process is occupying 443
+
+Run ` sudo netstat -tulpn | grep 443`
+
+And the with the pid run
+
+`lsof -p <PID> | grep cwd`
+
+Then you see what process is causing it
+
+
