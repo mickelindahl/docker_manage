@@ -88,4 +88,7 @@ And the with the pid run
 
 Then you see what process is causing it
 
+Kill it wiht
+
+`sudo kill -9 <PID>`
 
